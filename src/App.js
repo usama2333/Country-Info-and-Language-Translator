@@ -1,24 +1,79 @@
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+
+import { createTheme, ThemeProvider } from "@mui/material";
+import React, { createContext, Fragment, useMemo, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from './components/Navbar';
+
+export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 function App() {
+
+  const [mode, setMode] = useState("light");
+  const colorMode = useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+      },
+    }),
+    []
+  );
+
+  const theme = useMemo(
+    () =>
+      createTheme({
+        breakpoints: {
+          values: {
+            xs: 0,
+            sm: 684,
+            md: 986,
+            lg: 1290,
+            xl: 1536,
+          },
+        },
+        typography: {
+          h3: {
+            fontSize: "1.4rem",
+            fontWeight: 700,
+          },
+          body1: {
+            fontSize: "1rem",
+            fontWeight: 600,
+          },
+          body2: {
+            fontSize: ".95rem",
+            fontWeight: 500,
+          },
+          fontFamily: "Nunito Sans",
+        },
+        palette: {
+          mode,
+          ...(mode === "light"
+            ? {
+                background: {
+                  default: "#fafafa ",
+                },
+              }
+            : {
+                background: {
+                  default: "#202c37 ",
+                },
+              }),
+        },
+      }),
+    [mode]
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <ColorModeContext.Provider value={colorMode}>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+      <Navbar/>
+    </BrowserRouter>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
   );
 }
 
