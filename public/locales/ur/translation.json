@@ -1,0 +1,26 @@
+{
+  "Whereintheworld": "?دنیا میں کہاں",
+  "DarkMode": "ڈارک موڈ",
+  "LightMode": "لائٹ موڈ",
+  "Searchforacountry": "ایک ملک تلاش کریں۔",
+  "Filterbyregions": "علاقوں کے لحاظ سے فلٹر کریں۔",
+  "Back":"پیچھے",
+  "NotExists":"موجود نہیں ہے۔",
+  "NotFound":"ڈیٹا نہیں ملا",
+  "CustomCard": {
+    "Population": "آبادی",
+    "Region": "علاقہ",
+    "Capital": "سرمایہ"
+  },
+  "CountryDetails": {
+    "NativeName": "آبائی نام",
+    "Population": "آبادی",
+    "Region": "علاقہ",
+    "SubRegion": "ذیلی علاقہ",
+    "Capital": "سرمایہ",
+    "TopLevelDomain": "ٹاپ لیول ڈومین",
+    "Currencies": "کرنسیاں",
+    "Languages": "زبانیں",
+    "BorderCountries": "سرحدی ممالک"
+  }
+}

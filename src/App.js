@@ -4,7 +4,11 @@ import logo from './logo.svg';
 import { createTheme, ThemeProvider } from "@mui/material";
 import React, { createContext, Fragment, useMemo, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from './components/Navbar';
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Nopage from "./pages/Nopage";
+import DetailedCountryPage from "./pages/DetailedCountryPage";
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
@@ -66,12 +70,17 @@ function App() {
   );
 
   return (
-
-    <ColorModeContext.Provider value={colorMode}>
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-      <Navbar/>
-    </BrowserRouter>
+<ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/country/:details" element={<DetailedCountryPage />} />
+            <Route path="/*" element={<Nopage />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );

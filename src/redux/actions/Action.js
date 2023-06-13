@@ -23,6 +23,7 @@ import {
     try {
       dispatch(getDataStart());
       const response = await axios.get(`${API_URL}alpha/${data.details}`);
+      
       dispatch(getSingleCountry(response.data));
     } catch (error) {
       dispatch(getDataFailure(error));

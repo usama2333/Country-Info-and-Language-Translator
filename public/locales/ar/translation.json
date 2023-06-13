@@ -1,0 +1,26 @@
+{
+  "Whereintheworld": "?أين في العالم",
+  "DarkMode": "الوضع الداكن",
+  "LightMode": "وضع الضوء",
+  "Searchforacountry": "ابحث عن بلد",
+  "Filterbyregions": "تصفية حسب المناطق",
+  "Back":"خلف",
+  "NotExists":"لا يوجد",
+  "NotFound":"لم يتم العثور على بيانات",
+  "CustomCard": {
+    "Population": "سكان",
+    "Region": "منطقة",
+    "Capital": "عاصمة"
+  },
+  "CountryDetails": {
+    "NativeName": "الاسم الأصلي",
+    "Population": "سكان",
+    "Region": "منطقة",
+    "SubRegion": "المنطقة الفرعية",
+    "Capital": "عاصمة",
+    "TopLevelDomain": "نطاق المستوى الأعلى",
+    "Currencies": "العملات",
+    "Languages": "اللغات",
+    "BorderCountries": "دول الحدود"
+  }
+}

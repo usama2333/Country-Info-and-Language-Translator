@@ -5,7 +5,8 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { ReactComponent as Britishicon } from "../assets/Images/Language_select/united-kingdom-flag-icon.svg";
 import { ReactComponent as SpainIcon } from "../assets/Images/Language_select/spain-flag-icon.svg";
 import { ReactComponent as KoreanIcon } from "../assets/Images/Language_select/south_korea.svg";
-
+import { ReactComponent as UrduIcon } from '../assets/Images/Language_select/flag-for-flag-pakistan-svgrepo-com.svg';
+import { ReactComponent as SudiaIcon } from '../assets/Images/Language_select/saudi-arabia-svgrepo-com.svg';
 function LanguageDropdown() {
   const [language, setLanguage] = useState("en");
   const handleChange = (e) => {
@@ -39,6 +40,26 @@ function LanguageDropdown() {
               inheritViewBox
             />
             English
+          </Box>
+        </MenuItem>
+        <MenuItem value={"ur"}>
+          <Box display="flex" justifyContent="flex-start" alignItems="center">
+            <SvgIcon
+              component={UrduIcon}
+              sx={{ height: "1.2rem", mr: "0.3rem" }}
+              inheritViewBox
+            />
+            اردو
+          </Box>
+        </MenuItem>
+        <MenuItem value={"ar"}>
+          <Box display="flex" justifyContent="flex-start" alignItems="center">
+            <SvgIcon
+              component={SudiaIcon}
+              sx={{ height: "1.2rem", mr: "0.3rem" }}
+              inheritViewBox
+            />
+            عربی
           </Box>
         </MenuItem>
         <MenuItem value={"es"}>

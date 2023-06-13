@@ -3,7 +3,7 @@ import { initReactI18next } from "react-i18next";
 
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
-const avaliableLanguages=['en','es','ko'];
+const avaliableLanguages=['en','es','ko','ur'];
 const option={
   order: [ 'cookie', 'localStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
   checkWhitelist:true,
